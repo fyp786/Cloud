@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1062229967589",
+    "project_id": "cloudcontacts-f7efb",
+    "storage_bucket": "cloudcontacts-f7efb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062229967589:android:66e2b35ecd82097f000a0c",
+        "android_client_info": {
+          "package_name": "com.codeseyee.cloudcontacts"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6g7cuIb90LGVXUs9GwbXQ-sUvRRrD1R8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

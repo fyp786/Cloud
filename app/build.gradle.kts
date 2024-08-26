@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage)
+    implementation(libs.androidx.room.common)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -60,5 +61,31 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.0")
 
     implementation ("com.google.android.material:material:1.9.0")
+
+    implementation ("com.squareup.picasso:picasso:2.71828")
+
+    implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+    implementation ("com.google.zxing:core:3.4.1")
+    implementation ("me.dm7.barcodescanner:zxing:1.9")
+    implementation ("com.google.mlkit:barcode-scanning:17.0.2")
+
+
+    implementation ("com.fasterxml.jackson.core:jackson-annotations:2.14.0")
+    implementation ("com.google.code.gson:gson:2.10")
+
+    implementation ("com.github.yalantis:ucrop:2.2.6")
+    implementation ("com.yalantis:ucrop:2.2.8")
+
+    implementation ("com.google.android.gms:play-services-auth:21.0.1")
+
+
+
+
+
+
+
+
+
 
 }

@@ -17,7 +17,13 @@ class SignUpViewModel : ViewModel() {
     private val firestore = FirebaseFirestore.getInstance()
     private val storage = FirebaseStorage.getInstance()
 
-    fun signUpUser(email: String, phone: String, name: String, password: String, profileImageUri: String?, accountType: String) {
+    fun signUpUser(
+        email: String,
+        phone: String,
+        name: String,
+        password: String,
+        accountType: String
+    ) {
         if (profileImageUri != null) {
             val profileImageRef = storage.reference.child("profile_images/${System.currentTimeMillis()}.jpg")
             profileImageRef.putFile(Uri.parse(profileImageUri))

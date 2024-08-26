@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,12 +18,50 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
+        <activity
+            android:name=".UserDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditIndividualProfileActvity"
+            android:exported="false" />
+        <activity
+            android:name=".EditBusinessProfileActvity"
+            android:exported="false" />
+        <activity
+            android:name=".ContactDetails"
+            android:exported="false" />
+        <activity
+            android:name=".CompleteProfileAfterGoogleSignup"
+            android:exported="false" />
+        <activity
+            android:name=".ChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".BusinessContactDetails"
+            android:exported="false" />
+        <activity
+            android:name=".AddContact"
+            android:exported="false" />
+        <activity
+            android:name=".DeletePermanantlyActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.firebase.analytics.DEFAULT_ANALYTICS_COLLECTION_ENABLED"
             android:value="true" />
         <meta-data
             android:name="com.google.firebase.crashlytics.SEND_REPORTS_AT_CRASH"
             android:value="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="false" />

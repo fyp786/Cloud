@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Add new contact using" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/layout_add_by_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_11sdp"
+            android:paddingBottom="@dimen/_9sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_42sdp"
+                app:cardBackgroundColor="@color/icon_tint"
+                app:cardCornerRadius="@dimen/_21sdp"
+                android:layout_height="@dimen/_42sdp" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_baseline_call_24"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone number"
+                android:textColor="@color/icon_tint"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_add_by_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_42sdp"
+                app:cardBackgroundColor="@color/icon_tint"
+                app:cardCornerRadius="@dimen/_21sdp"
+                android:layout_height="@dimen/_42sdp" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_baseline_email_24"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email id"
+                android:textColor="@color/icon_tint"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_add_by_qr_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_42sdp"
+                app:cardBackgroundColor="@color/icon_tint"
+                app:cardCornerRadius="@dimen/_21sdp"
+                android:layout_height="@dimen/_42sdp" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_twotone_qr_code_scanner_24"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QR code"
+                android:textColor="@color/icon_tint"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_add_by_invite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_42sdp"
+                app:cardBackgroundColor="@color/icon_tint"
+                app:cardCornerRadius="@dimen/_21sdp"
+                android:layout_height="@dimen/_42sdp" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_baseline_connect_without_contact_24"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite"
+                android:textColor="@color/icon_tint"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

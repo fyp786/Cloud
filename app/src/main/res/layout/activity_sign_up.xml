@@ -154,7 +154,7 @@
                         android:background="@drawable/radio_button_background" />
 
                     <RadioButton
-                        android:id="@+id/radioBusiness"
+                        android:id="@+id/chipBusiness"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Business"

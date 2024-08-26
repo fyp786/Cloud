@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- ScrollView to handle scrolling of the content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <!-- Content inside the ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="30dp"
+                    android:theme="@style/ImageCircleTheme"
+                    android:src="@drawable/ic_baseline_person_24" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile_image_edit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="bottom|right"
+                    app:cardBackgroundColor="#F5FFFFFF">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:tint="@color/black"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_baseline_edit_24" />
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+            <!-- Email section -->
+            <TextView
+                style="@style/TextViewLabelTheme"
+                android:layout_marginTop="40dp"
+                android:text="Email Address" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                style="@style/MaterialTextInputLayoutStyle"
+                app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="Email address"
+                    style="@style/TextInputEdittextTheme"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Phone number section -->
+            <TextView
+                style="@style/TextViewLabelTheme"
+                android:text="Phone number" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone"
+                style="@style/MaterialTextInputLayoutStyle"
+                app:startIconDrawable="@drawable/ic_baseline_call_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="Phone number"
+                    style="@style/TextInputEdittextTheme"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Name section -->
+            <TextView
+                style="@style/TextViewLabelTheme"
+                android:text="Name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                style="@style/MaterialTextInputLayoutStyle"
+                app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/TextInputEdittextTheme"
+                    android:hint="Name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Public profile toggle switch -->
+            <Switch
+                android:id="@+id/public_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:padding="12dp"
+                android:minHeight="48dp"
+                android:text="Make my profile public"
+                android:textColor="@color/white"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/publicMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="*Only users having your contact can see your profile" />
+
+            <!-- Date of birth section -->
+            <TextView
+                style="@style/TextViewLabelTheme"
+                android:text="Date of birth" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:entries="@array/dates"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:minHeight="56dp"
+                    android:spinnerMode="dialog" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edittext_bg"
+                    android:entries="@array/month"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:spinnerMode="dialog" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:entries="@array/year"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:minHeight="48dp"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <!-- Profession section -->
+            <TextView
+                style="@style/TextViewLabelTheme"
+                android:text="Profession" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profession"
+                style="@style/MaterialTextInputLayoutStyle"
+                app:startIconDrawable="@drawable/ic_baseline_work_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/TextInputEdittextTheme"
+                    android:hint="like Teacher, Business man"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Location section -->
+            <TextView
+                style="@style/TextViewLabelTheme"
+                android:text="Location (city, region and country name)" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/location"
+                style="@style/MaterialTextInputLayoutStyle"
+                app:startIconDrawable="@drawable/ic_baseline_location_on_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/TextInputEdittextTheme"
+                    android:hint="like Haripad, Kerala, India"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Status section -->
+            <TextView
+                style="@style/TextViewLabelTheme"
+                android:text="Status" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/about"
+                style="@style/MaterialTextInputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/TextInputEdittextTheme"
+                    android:hint="Write something..."
+                    android:layout_height="200dp"
+                    android:lines="10"
+                    android:singleLine="false"
+                    android:maxLines="10"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Update button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                app:cornerRadius="25sp"
+                android:textAllCaps="false"
+                android:text="    Update    " />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

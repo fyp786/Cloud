@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/bggg" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/layout_email_dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardBackgroundColor="#D8DCDCDC"
+                    app:cardCornerRadius="20dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="34dp"
+                        android:id="@+id/dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="3dp"
+                        app:shapeAppearance="@style/ImageCircleTheme"
+                        android:src="@drawable/ic_baseline_person_24"/>
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="email@gmail.com"
+                            android:lines="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Complete your profile"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Your account is created, enter following information to complete your profile"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/TextViewLabelTheme"
+                    android:text="Phone number"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phone"
+                    style="@style/MaterialTextInputLayoutStyle"
+                    app:startIconDrawable="@drawable/ic_baseline_call_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/TextInputEdittextTheme"
+                        android:hint="Phone number"
+                        android:inputType="phone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    style="@style/TextViewLabelTheme"
+                    android:text="Account type"
+                    android:textColor="@color/white" />
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="0dp"
+                    app:checkedChip="@id/chipIndividual"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipIndividual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checkable="true"
+                        android:text="  Individual  "
+                        app:checkedIconEnabled="false"
+                        android:textColor="@color/chip_color"
+                        app:checkedIconTint="@color/accent_color"
+                        app:chipIcon="@drawable/ic_baseline_person_24"
+                        app:chipIconTint="@color/chip_color"
+                        app:iconStartPadding="10dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipBusiness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checkable="true"
+                        android:text="  Business  "
+                        app:checkedIconEnabled="false"
+                        android:textColor="@color/chip_color"
+                        app:checkedIconTint="@color/accent_color"
+                        app:chipIcon="@drawable/ic_baseline_business_24"
+                        app:chipIconTint="@color/chip_color"
+                        app:iconStartPadding="10dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    style="@style/TextViewLabelTheme"
+                    android:text="Name"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name"
+                    style="@style/MaterialTextInputLayoutStyle"
+                    app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/TextInputEdittextTheme"
+                        android:hint="Name"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <Switch
+                    android:id="@+id/public_profile"
+                    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:padding="12dp"
+                android:minHeight="48dp"
+                android:text="Make my profile public"
+                android:textColor="@color/white"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                <TextView
+                    android:id="@+id/publicMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="*Only users having your contact can see your profile"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/loginbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:text="    Save    "
+                    android:textAllCaps="false"
+                    app:cornerRadius="30dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

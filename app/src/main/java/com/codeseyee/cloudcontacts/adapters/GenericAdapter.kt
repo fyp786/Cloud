@@ -2,11 +2,9 @@ package com.codeseyee.cloudcontacts.adapters
 
 
 import android.content.Context
-import android.content.res.Resources
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.ColorInt
 import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import com.codeseye.cloudcontacts.contactutils.Contact
@@ -28,7 +26,7 @@ class GenericAdapter(
 ) : RecyclerView.Adapter<BaseViewHolder>() {
 
     private val colorCodes: Array<String> = context.resources.getStringArray(R.array.dp_colors)
-    private val appDatabase: AppDatabase = AppDatabase.getDatabase(context)
+    private val appDatabase: AppDatabase = AppDatabase.getDatabase()
     val cardDefaultBgColor: Int
 
     var selectionListener: MultipleSelectionInterface? = null
@@ -36,7 +34,7 @@ class GenericAdapter(
     init {
         val typedValue = TypedValue()
         val theme = context.theme
-        theme.resolveAttribute(R.attr.colorPrimary, typedValue, true)
+        theme.resolveAttribute(R.attr.homeToolbarColor, typedValue, true)
         cardDefaultBgColor = typedValue.data
     }
 

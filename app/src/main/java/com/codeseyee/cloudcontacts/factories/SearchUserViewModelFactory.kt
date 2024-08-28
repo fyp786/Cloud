@@ -12,7 +12,7 @@ class SearchUserViewModelFactory(
     private val appDatabase: AppDatabase
 ) : ViewModelProvider.Factory {
     @Suppress("UNCHECKED_CAST")
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(SearchUserViewModel::class.java)) {
             return SearchUserViewModel(application, appDatabase) as T
         }

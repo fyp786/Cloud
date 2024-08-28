@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage)
     implementation(libs.androidx.room.common)
+    implementation(libs.firebase.messaging.ktx)
+    implementation(libs.androidx.camera.core)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -80,12 +82,21 @@ dependencies {
     implementation ("com.google.android.gms:play-services-auth:21.0.1")
 
 
+    implementation ("androidx.room:room-runtime:2.6.1")
+    annotationProcessor ("androidx.room:room-compiler:2.6.1")
 
+    // Retrofit and Gson
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-scalars:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    implementation ("com.google.code.gson:gson:2.10.1")
 
+    implementation ("com.fasterxml.jackson.core:jackson-core:2.15.0")
+    implementation ("com.fasterxml.jackson.core:jackson-databind:2.15.0")
+    implementation ("com.fasterxml.jackson.core:jackson-annotations:2.15.0")
 
-
-
-
-
+    implementation ("com.github.yalantis:ucrop:2.2.6")
 
 }
+
